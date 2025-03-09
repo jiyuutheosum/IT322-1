@@ -11,32 +11,23 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#users-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#enrollment-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Enrollment Management</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="users-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="enrollment-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="users-alerts.html">
-              <i class="bi bi-circle"></i><span>Manage Students</span>
+            <a href="enrollment-alerts.html">
+              <i class="bi bi-circle"></i><span>Enroll in Courses</span>
             </a>
           </li>
           <li>
-            <a href="users-accordion.html">
-              <i class="bi bi-circle"></i><span>Manage Teachers</span>
+            <a href="enrollment-accordion.html">
+              <i class="bi bi-circle"></i><span>Enrollment Status</span>
             </a>
           </li>
-          <li>
-            <a href="users-badges.html">
-              <i class="bi bi-circle"></i><span>Manage Admins</span>
-            </a>
-          </li>
-          <li>
-            <a href="users-breadcrumbs.html">
-              <i class="bi bi-circle"></i><span>User Roles & Permissions</span>
-            </a>
-          </li>
+
         </ul>
-      </li><!-- End Users Nav -->
+      </li><!-- End enrollment Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#course-nav" data-bs-toggle="collapse" href="#">
@@ -45,49 +36,35 @@
         <ul id="course-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="course-elements.html">
-              <i class="bi bi-circle"></i><span>Course List</span>
+              <i class="bi bi-circle"></i><span>My Courses</span>
             </a>
           </li>
           <li>
             <a href="course-layouts.html">
-              <i class="bi bi-circle"></i><span>Add/Edit/Delete Courses</span>
-            </a>
-          </li>
-          <li>
-            <a href="course-editors.html">
-              <i class="bi bi-circle"></i><span>Assign Instructors</span>
-            </a>
-          </li>
-          <li>
-            <a href="course-validation.html">
-              <i class="bi bi-circle"></i><span>Course Schedules</span>
+              <i class="bi bi-circle"></i><span>Course Materials</span>
             </a>
           </li>
         </ul>
       </li><!-- End course Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#enrollman-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Enrollment Management</span><i class="bi bi-chevron-down ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#classched-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Class Schedule</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="enrollman-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="classched-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="enrollman-general.html">
-              <i class="bi bi-circle"></i><span>Enrollment Requests</span>
+            <a href="classched-general.html">
+              <i class="bi bi-circle"></i><span>Class schedule</span>
             </a>
           </li>
           <li>
-            <a href="enrollman-data.html">
-              <i class="bi bi-circle"></i><span>Enrolled Students</span>
+            <a href="classched-data.html">
+              <i class="bi bi-circle"></i><span>Upcoming classes and exams</span>
             </a>
           </li>
-          <li>
-            <a href="enrollman-accordion.html">
-              <i class="bi bi-circle"></i><span>Waitlisted Students</span>
-            </a>
-          </li>
+          
         </ul>
-      </li><!-- End enrollman Nav -->
+      </li><!-- End classsched Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#payment-nav" data-bs-toggle="collapse" href="#">
@@ -144,7 +121,7 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Icons Nav -->
+      </li><!-- End reports Nav -->
 
       <li class="nav-heading">Pages</li>
 

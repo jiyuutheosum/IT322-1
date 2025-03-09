@@ -32,7 +32,7 @@ if(isset($_POST['login'])) {
             if($userRole == 'admin') {
                 header('Location: ../view/admin/index.php');
             } elseif($userRole == 'user') {
-                header('Location: ../view/user/index.php');
+                header('Location: ../view/users/index.php');
             } else {
                 header('Location: ../login.php');
             }
