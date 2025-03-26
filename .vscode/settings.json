@@ -10,13 +10,22 @@
         "datatables",
         "enrolledstud",
         "enrollman",
+        "enrollmentdb",
         "enrollreq",
+        "firstname",
+        "lastname",
         "managestudents",
         "manageteachers",
+        "nikelist",
+        "productlist",
         "remixicon",
         "sched",
+        "Skechers",
+        "ssdiis",
         "Swal",
         "topbar",
-        "Waitlisted"
+        "viewcart",
+        "Waitlisted",
+        "xampp"
     ]
 }

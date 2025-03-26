@@ -9,5 +9,3 @@ include("./includes/dashboard.php");
 
 include("./includes/footer.php");
 ?>
-
-
