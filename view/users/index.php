@@ -1,10 +1,20 @@
 <?php
+session_start();
 include("./includes/header.php");
 include("./includes/topbar.php");
 include("./includes/sidebar.php");
 ?>
 
 <div class="container mt-4">
+
+    <!-- Display alert message -->
+    <?php
+    if(isset($_SESSION['message'])) {
+        echo "<script>alert('" . $_SESSION['message'] . "');</script>";
+        unset($_SESSION['message']); // Clear message after displaying
+    }
+    ?>
+
     <h2>📊 User Dashboard</h2>
 
     <!-- Enrolled Courses -->
@@ -49,8 +59,6 @@ include("./includes/sidebar.php");
         </div>
     </div>
 </div>
-
-
 
 <?php
 include("./includes/footer.php");

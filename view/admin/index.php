@@ -1,10 +1,20 @@
 <?php
+session_start();
 include("./includes/header.php");
 include("./includes/topbar.php");
 include("./includes/sidebar.php");
 ?>
 
 <div class="container-fluid px-4">
+
+    <!-- Display alert message -->
+    <?php
+    if(isset($_SESSION['message'])) {
+        echo "<script>alert('" . $_SESSION['message'] . "');</script>";
+        unset($_SESSION['message']); // Remove message after showing
+    }
+    ?>
+
     <h1 class="mt-4">Admin Dashboard</h1>
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Overview of Enrollment System</li>
@@ -16,7 +26,6 @@ include("./includes/sidebar.php");
             <div class="card bg-primary text-white mb-4">
                 <div class="card-body">Total Students</div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <h4>1,245</h4>
                 </div>
             </div>
         </div>
@@ -24,7 +33,6 @@ include("./includes/sidebar.php");
             <div class="card bg-success text-white mb-4">
                 <div class="card-body">Pending Enrollments</div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <h4>34</h4>
                 </div>
             </div>
         </div>
@@ -32,7 +40,6 @@ include("./includes/sidebar.php");
             <div class="card bg-warning text-white mb-4">
                 <div class="card-body">Active Courses</div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <h4>52</h4>
                 </div>
             </div>
         </div>
@@ -40,7 +47,6 @@ include("./includes/sidebar.php");
             <div class="card bg-danger text-white mb-4">
                 <div class="card-body">Unpaid Balances</div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <h4>$4,500</h4>
                 </div>
             </div>
         </div>
@@ -62,12 +68,7 @@ include("./includes/sidebar.php");
             <div class="card mb-4">
                 <div class="card-header"><i class="fas fa-history me-1"></i> Recent Activities</div>
                 <div class="card-body">
-                    <ul>
-                        <li>John Doe enrolled in "Computer Science 101"</li>
-                        <li>New Course Added: "Advanced Math"</li>
-                        <li>Payment Received: $250 from Jane Smith</li>
-                        <li>Enrollment Request Pending Approval</li>
-                    </ul>
+                    
                 </div>
             </div>
         </div>
@@ -92,8 +93,6 @@ include("./includes/sidebar.php");
         }
     });
 </script>
-
-
 
 <?php
 include("./includes/footer.php");

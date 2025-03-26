@@ -3,10 +3,14 @@ session_start();
 include('../db/config.php');
 
 if(isset($_POST['login'])) {
-
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    // Prevent SQL Injection
+    $email = mysqli_real_escape_string($conn, $email);
+    $password = mysqli_real_escape_string($conn, $password);
+
+    // Query to check user credentials
     $query = "SELECT userId, firstName, lastName, email, password, phoneNumber, gender, birthday, verification, role 
               FROM users WHERE email = '$email' AND password = '$password' LIMIT 1";
 
@@ -28,6 +32,10 @@ if(isset($_POST['login'])) {
                 'fullName' => $fullName,
                 'emailAddress' => $emailAddress
             ];
+
+            // Store success message
+            $_SESSION['message'] = "Welcome, $fullName! You have successfully logged in.";
+            $_SESSION['code'] = "success";
 
             if($userRole == 'admin') {
                 header('Location: ../view/admin/index.php');
@@ -51,8 +59,8 @@ if(isset($_POST['login'])) {
     }
 } else {
     $_SESSION['message'] = "Invalid Request";
-        $_SESSION['code'] = "error";
-        header('Location: ../login.php');
-        exit();
+    $_SESSION['code'] = "error";
+    header('Location: ../login.php');
+    exit();
 }
 ?>
