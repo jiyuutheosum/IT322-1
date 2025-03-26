@@ -6,9 +6,16 @@
         "chartjs",
         "classched",
         "classsched",
+        "courselist",
         "datatables",
+        "enrolledstud",
         "enrollman",
+        "enrollreq",
+        "managestudents",
+        "manageteachers",
         "remixicon",
+        "sched",
+        "Swal",
         "topbar",
         "Waitlisted"
     ]

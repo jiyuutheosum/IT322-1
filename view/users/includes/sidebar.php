@@ -58,7 +58,7 @@
         </a>
         <ul id="classched-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="classched-general.html">
+            <a href="class-sched.html">
               <i class="bi bi-circle"></i><span>Class schedule</span>
             </a>
           </li>

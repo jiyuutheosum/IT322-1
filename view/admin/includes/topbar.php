@@ -61,20 +61,26 @@ session_start();
                     <img src="../../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
                     <span class="d-none d-md-block dropdown-toggle ps-2">
                         <?php 
-                        if (isset($_SESSION['fullname'])) {
-                          echo $_SESSION['fullname'];
-                      } else {
-                          echo "Guest";
-                      }
-                      
+                        if (isset($_SESSION['authuser']['fullName'])) {
+                            echo $_SESSION['authuser']['fullName'];
+                            } else {
+                                echo "Guest";
+                            }
                         ?>
                     </span>
                 </a><!-- End Profile Image Icon -->
 
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                        <h6><?php echo isset($_SESSION['fullname']) ? $_SESSION['fullname'] : "Guest"; ?></h6>
-                        <span>User Role</span>
+                        <h6><?php 
+                        echo isset($_SESSION['authuser']['fullName']) ? $_SESSION['authuser']['fullName'] : "Guest"; 
+                        ?>
+                    </h6>
+                    <span>
+                        <?php 
+                        echo isset($_SESSION['role']) ? ucfirst($_SESSION['role']) : "No Role"; 
+                        ?>
+                    </span>
                     </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
@@ -99,7 +105,7 @@ session_start();
                     </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="/controller/logout.php">
+                        <a class="dropdown-item d-flex align-items-center" href="../../controller/logout.php">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Sign Out</span>
                         </a>
@@ -110,4 +116,32 @@ session_start();
         </ul>
     </nav><!-- End Icons Navigation -->
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<?php
+if(isset($_SESSION['message']) && $_SESSION['code'] !='') {
+    ?>
+    <script>
+      
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "<?php echo $_SESSION['code']; ?>",
+        title: "<?php echo $_SESSION['message']; ?>"
+      });
+    </script>
+    <?php
+    unset($_SESSION['message']);
+    unset($_SESSION['code']);
+}     
+?>
 </header><!-- End Header -->

@@ -17,53 +17,51 @@
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
-        table {
-            margin-top: 15px;
-        }
-        .btn-action {
-            margin-right: 5px;
-        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2 class="text-center">Course List</h2>
-    <div class="card p-4">
-        <button class="btn btn-primary mb-3">Add New Course</button>
-        <table class="table table-striped">
-            <thead class="table-dark">
-                <tr>
-                    <th>Course ID</th>
-                    <th>Course Name</th>
-                    <th>Instructor</th>
-                    <th>Department</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>CSE101</td>
-                    <td>Introduction to Programming</td>
-                    <td>Prof. John Doe</td>
-                    <td>Computer Science</td>
-                    <td>
-                        <button class="btn btn-success btn-sm btn-action">Edit</button>
-                        <button class="btn btn-danger btn-sm btn-action">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MTH102</td>
-                    <td>Calculus I</td>
-                    <td>Prof. Jane Smith</td>
-                    <td>Mathematics</td>
-                    <td>
-                        <button class="btn btn-success btn-sm btn-action">Edit</button>
-                        <button class="btn btn-danger btn-sm btn-action">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <h2 class="text-center">Course List by Department</h2>
+    
+    <div class="accordion" id="courseAccordion">
+        
+        <!-- Computer Science Department -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingCS">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCS">
+                    Computer Science
+                </button>
+            </h2>
+            <div id="collapseCS" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">CSE101 - Introduction to Programming</li>
+                        <li class="list-group-item">CSE102 - Data Structures</li>
+                        <li class="list-group-item">CSE103 - Algorithms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mathematics Department -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingMath">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMath">
+                    Mathematics
+                </button>
+            </h2>
+            <div id="collapseMath" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">MTH102 - Calculus I</li>
+                        <li class="list-group-item">MTH103 - Linear Algebra</li>
+                        <li class="list-group-item">MTH104 - Probability & Statistics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 

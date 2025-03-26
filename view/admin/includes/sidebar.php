@@ -72,12 +72,12 @@
         </a>
         <ul id="enrollman-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="enrollman-general.html">
+            <a href="enrollreq.html">
               <i class="bi bi-circle"></i><span>Enrollment Requests</span>
             </a>
           </li>
           <li>
-            <a href="enrollman-data.html">
+            <a href="enrolledstud.html">
               <i class="bi bi-circle"></i><span>Enrolled Students</span>
             </a>
           </li>
