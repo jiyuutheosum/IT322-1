@@ -15,6 +15,8 @@ if (isset($_POST["registration"])){
     if($password != $cpassword){
         $_SESSION["message"] = "Password and confirm password does not match";
         $_SESSION["code"] = "error"; 
+        header("Location: ../registration.php");
+        exit();
     }
 
     $query = "SELECT * FROM `users` WHERE `email` = '$email'";
